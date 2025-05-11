@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  data-check:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./app:/app/app
+      - ./result:/result
+      - ./backup:/backup
+    command: python main.py
